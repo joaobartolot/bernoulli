@@ -1,102 +1,122 @@
+import fillingStation from '../assets/projects/filling-station.svg';
+import adblueMonitoring from '../assets/projects/adblue-monitoring.svg';
+import hydrogenUnit from '../assets/projects/hydrogen-unit.svg';
+
 export const content = {
   en: {
     nav: { home: 'Home', projects: 'Projects', about: 'About Us', contact: 'Contact' },
+    theme: { dark: 'Dark', light: 'Light', toggleTheme: 'Toggle theme' },
+    accessibility: { toggleMenu: 'Toggle menu' },
     hero: {
-      tag: 'Fluid Automation Software Engineering',
-      title: 'Intelligent software for critical fluid systems',
+      badge: 'Fluid automation engineering + software',
+      title: 'Industrial fluid control that feels simple, fast, and safe.',
       description:
-        'Bernoulli Automation designs and develops robust automation platforms for filling stations, AdBlue production, hydrogen units, and other industrial fluid operations.',
-      ctaPrimary: 'Talk to our team',
-      ctaSecondary: 'See projects'
+        'Bernoulli Automation designs digital control systems for complex plants, with a user experience that keeps operators confident from first glance.',
+      ctaPrimary: 'Book a discovery call',
+      ctaSecondary: 'See project cases',
+      highlights: ['Fast visual reading', 'Safety-focused workflows', 'Real-world engineering reliability']
     },
     projects: {
-      title: 'Featured Projects',
+      title: 'Project cases',
+      subtitle: 'Mock cases showing how we design the software layer for fluid-critical operations.',
       items: [
         {
-          title: 'Smart Filling Station Control',
-          description: 'Real-time supervision and fault-tolerant sequencing for high-throughput filling lines.',
-          image: 'https://images.unsplash.com/photo-1581093794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80'
+          title: 'Filling Station Intelligence',
+          description: 'Sequencing, alerts, and throughput guidance to reduce downtime and improve operator decision speed.',
+          image: fillingStation
         },
         {
-          title: 'AdBlue Production Monitoring',
-          description: 'Automated process dashboards with quality checkpoints and maintenance alerts.',
-          image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1200&q=80'
+          title: 'AdBlue Production Control',
+          description: 'Recipe validation and process health dashboards that keep quality and compliance on track.',
+          image: adblueMonitoring
         },
         {
-          title: 'Hydrogen Unit Automation',
-          description: 'Safety-first orchestration layer integrating sensors, PLCs, and reporting.',
-          image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80'
+          title: 'Hydrogen Unit Supervisor',
+          description: 'A safe-by-design orchestration layer that translates field data into clear operational actions.',
+          image: hydrogenUnit
         }
       ]
     },
     about: {
-      title: 'Engineering team with multidisciplinary expertise',
+      title: 'Three engineers. One systems mindset.',
       description:
-        'We are Bernoulli Automation: a software-focused engineering company built by professionals with mechanical, electrical, and software backgrounds.',
+        'Our team blends mechanical, electrical, and software expertise so projects are practical on the plant floor and robust in code.',
       team: [
-        'Nicolas Bartolote — Mechanical Engineer',
-        'Raphael Bruno — Electrical Engineer',
-        'Joao Bartolot — Software Engineer'
+        { name: 'Nicolas Bartolote', role: 'Mechanical Engineer', note: 'Process and equipment behavior specialist.' },
+        { name: 'Raphael Bruno', role: 'Electrical Engineer', note: 'Instrumentation, panel, and controls integration.' },
+        { name: 'Joao Bartolot', role: 'Software Engineer', note: 'Control software architecture and platform development.' }
       ]
     },
     contact: {
-      title: 'Let’s discuss your next automation challenge',
-      description: 'Send us a quick message. This form currently logs data to the browser console.',
+      title: 'Let’s map your next automation build',
+      description: 'Send a quick brief. The form currently performs a mock submit and logs data in the browser console.',
       name: 'Name',
       email: 'Email',
-      message: 'Message',
-      submit: 'Send message'
+      message: 'Tell us your process challenge',
+      submit: 'Send message',
+      success: 'Message received (mock). We logged it in the console.'
     },
-    footer: { rights: 'All rights reserved.', follow: 'Follow us' }
+    footer: {
+      slogan: 'Engineering software for fluid systems.',
+      rights: 'All rights reserved.'
+    }
   },
   pt: {
     nav: { home: 'Início', projects: 'Projetos', about: 'Sobre nós', contact: 'Contato' },
+    theme: { dark: 'Escuro', light: 'Claro', toggleTheme: 'Alternar tema' },
+    accessibility: { toggleMenu: 'Alternar menu' },
     hero: {
-      tag: 'Engenharia de Software para Automação de Fluidos',
-      title: 'Software inteligente para sistemas críticos de fluidos',
+      badge: 'Engenharia de automação de fluidos + software',
+      title: 'Controle industrial de fluidos com experiência simples, rápida e segura.',
       description:
-        'A Bernoulli Automation projeta e desenvolve plataformas robustas para estações de abastecimento, produção de AdBlue, unidades de hidrogênio e outras operações industriais de fluidos.',
-      ctaPrimary: 'Fale com nossa equipe',
-      ctaSecondary: 'Ver projetos'
+        'A Bernoulli Automation projeta sistemas digitais de controle para plantas complexas, com UX que dá confiança ao operador desde o primeiro olhar.',
+      ctaPrimary: 'Agendar conversa',
+      ctaSecondary: 'Ver casos de projeto',
+      highlights: ['Leitura visual rápida', 'Fluxos com foco em segurança', 'Confiabilidade de engenharia no mundo real']
     },
     projects: {
-      title: 'Projetos em destaque',
+      title: 'Casos de projeto',
+      subtitle: 'Casos mockados mostrando como desenhamos a camada de software para operações críticas de fluidos.',
       items: [
         {
-          title: 'Controle de Estação de Abastecimento',
-          description: 'Supervisão em tempo real e sequenciamento tolerante a falhas para linhas de alto desempenho.',
-          image: 'https://images.unsplash.com/photo-1581093794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80'
+          title: 'Inteligência para Estações de Abastecimento',
+          description: 'Sequenciamento, alertas e orientação de produtividade para reduzir paradas e acelerar decisões.',
+          image: fillingStation
         },
         {
-          title: 'Monitoramento de Produção de AdBlue',
-          description: 'Dashboards automatizados com controle de qualidade e alertas de manutenção.',
-          image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1200&q=80'
+          title: 'Controle de Produção de AdBlue',
+          description: 'Validação de receitas e dashboards de saúde do processo para garantir qualidade e conformidade.',
+          image: adblueMonitoring
         },
         {
-          title: 'Automação para Unidade de Hidrogênio',
-          description: 'Camada de orquestração com foco em segurança, integrando sensores, PLCs e relatórios.',
-          image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80'
+          title: 'Supervisor para Unidade de Hidrogênio',
+          description: 'Camada de orquestração focada em segurança que transforma dados de campo em ações claras.',
+          image: hydrogenUnit
         }
       ]
     },
     about: {
-      title: 'Equipe de engenharia multidisciplinar',
+      title: 'Três engenheiros. Uma visão sistêmica.',
       description:
-        'Somos a Bernoulli Automation: uma empresa de engenharia com foco em software, formada por profissionais das áreas mecânica, elétrica e de software.',
+        'Unimos experiência mecânica, elétrica e de software para criar soluções práticas no chão de fábrica e robustas no código.',
       team: [
-        'Nicolas Bartolote — Engenheiro Mecânico',
-        'Raphael Bruno — Engenheiro Elétrico',
-        'Joao Bartolot — Engenheiro de Software'
+        { name: 'Nicolas Bartolote', role: 'Engenheiro Mecânico', note: 'Especialista em comportamento de processo e equipamentos.' },
+        { name: 'Raphael Bruno', role: 'Engenheiro Elétrico', note: 'Integração de instrumentação, painéis e controle.' },
+        { name: 'Joao Bartolot', role: 'Engenheiro de Software', note: 'Arquitetura de software de controle e plataformas.' }
       ]
     },
     contact: {
-      title: 'Vamos conversar sobre seu próximo desafio de automação',
-      description: 'Envie uma mensagem rápida. Este formulário registra os dados no console do navegador.',
+      title: 'Vamos mapear seu próximo projeto de automação',
+      description: 'Envie um resumo rápido. O formulário faz um envio simulado e registra os dados no console.',
       name: 'Nome',
       email: 'E-mail',
-      message: 'Mensagem',
-      submit: 'Enviar mensagem'
+      message: 'Conte seu desafio de processo',
+      submit: 'Enviar mensagem',
+      success: 'Mensagem recebida (mock). Registramos no console.'
     },
-    footer: { rights: 'Todos os direitos reservados.', follow: 'Siga-nos' }
+    footer: {
+      slogan: 'Software de engenharia para sistemas de fluidos.',
+      rights: 'Todos os direitos reservados.'
+    }
   }
 };
