@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+
 import Header from './components/layout/Header';
 import HeroSection from './sections/HeroSection';
 import ProjectsSection from './sections/ProjectsSection';
