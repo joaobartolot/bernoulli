@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: 220 88% 48%;
+  --color-secondary: 210 35% 96%;
+  --color-accent: 180 85% 36%;
+  --color-surface: 0 0% 100%;
+  --color-text: 220 20% 14%;
+  --color-muted: 215 16% 46%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-brand-secondary text-brand-text antialiased;
+}
+
+.dark {
+  --color-primary: 210 95% 62%;
+  --color-secondary: 220 20% 10%;
+  --color-accent: 185 80% 55%;
+  --color-surface: 220 18% 14%;
+  --color-text: 210 30% 96%;
+  --color-muted: 215 14% 67%;
+}
+
+.section {
+  @apply mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8;
+}
+
+.card {
+  @apply rounded-2xl bg-brand-surface shadow-soft transition duration-300;
+}
