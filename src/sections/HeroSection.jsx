@@ -2,34 +2,38 @@ import heroFluid from '../assets/illustrations/hero-fluid.svg';
 
 export default function HeroSection({ hero }) {
   return (
-    <section id="home" className="section relative overflow-hidden pb-20 pt-16">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,hsl(var(--color-primary)/0.2),transparent_40%),radial-gradient(circle_at_80%_0%,hsl(var(--color-accent)/0.23),transparent_35%)]" />
+    <section id="home" className="section relative overflow-hidden pb-24 pt-16">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_12%,hsl(var(--color-primary)/0.22),transparent_38%),radial-gradient(circle_at_85%_0%,hsl(var(--color-secondary)/0.15),transparent_35%)]" />
       <div className="grid items-center gap-10 md:grid-cols-2">
         <div>
-          <p className="inline-flex rounded-full border border-brand-primary/20 bg-brand-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-primary">
+          <p className="inline-flex rounded-full border border-brand-primary/25 bg-brand-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-secondary">
             {hero.badge}
           </p>
-          <h1 className="mt-4 text-4xl font-black leading-[1.05] tracking-tight sm:text-6xl">{hero.title}</h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-brand-muted sm:text-lg">{hero.description}</p>
-          <ul className="mt-6 space-y-2">
+          <h1 className="mt-5 text-4xl font-black leading-[1.05] tracking-tight text-brand-secondary sm:text-6xl dark:text-brand-text">{hero.title}</h1>
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-brand-muted sm:text-lg">{hero.description}</p>
+          <ul className="mt-6 space-y-2.5">
             {hero.highlights.map((highlight) => (
-              <li key={highlight} className="flex items-center gap-2 text-sm font-medium text-brand-muted">
-                <span className="h-2.5 w-2.5 rounded-full bg-brand-accent" />
+              <li key={highlight} className="flex items-center gap-2.5 text-sm font-medium text-brand-muted">
+                <span className="h-2.5 w-2.5 rounded-full bg-brand-primary" />
                 {highlight}
               </li>
             ))}
           </ul>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#contact" className="rounded-2xl bg-brand-primary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-primary/30 transition hover:-translate-y-0.5">
+          <div className="mt-9 flex flex-wrap gap-3">
+            <a href="#contact" className="btn-primary">
               {hero.ctaPrimary}
             </a>
-            <a href="#projects" className="rounded-2xl border border-brand-muted/30 bg-white/70 px-6 py-3 text-sm font-semibold backdrop-blur transition hover:-translate-y-0.5 dark:bg-white/5">
+            <a href="#projects" className="btn-secondary">
               {hero.ctaSecondary}
             </a>
           </div>
         </div>
 
-        <img src={heroFluid} alt="Fluid automation dashboard concept" className="w-full rounded-[2rem] border border-white/40 shadow-soft dark:border-white/10" />
+        <img
+          src={heroFluid}
+          alt="Fluid automation dashboard concept"
+          className="panel w-full rounded-[2rem] border-brand-secondary/10 p-2"
+        />
       </div>
     </section>
   );
