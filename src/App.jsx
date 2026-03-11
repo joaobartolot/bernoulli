@@ -27,7 +27,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-brand-secondary text-brand-text">
+    <div className="min-h-screen bg-brand-surface text-brand-text">
       <Header
         t={t}
         language={language}

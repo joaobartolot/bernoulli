@@ -1,6 +1,9 @@
 import fillingStation from '../assets/projects/filling-station.svg';
 import adblueMonitoring from '../assets/projects/adblue-monitoring.svg';
 import hydrogenUnit from '../assets/projects/hydrogen-unit.svg';
+import personOne from '../assets/team/person-1.svg';
+import personTwo from '../assets/team/person-2.svg';
+import personThree from '../assets/team/person-3.svg';
 
 export const content = {
   en: {
@@ -42,9 +45,9 @@ export const content = {
       description:
         'Our team blends mechanical, electrical, and software expertise so projects are practical on the plant floor and robust in code.',
       team: [
-        { name: 'Nicolas Bartolote', role: 'Mechanical Engineer', note: 'Process and equipment behavior specialist.' },
-        { name: 'Raphael Bruno', role: 'Electrical Engineer', note: 'Instrumentation, panel, and controls integration.' },
-        { name: 'Joao Bartolot', role: 'Software Engineer', note: 'Control software architecture and platform development.' }
+        { name: 'Nicolas Bartolote', role: 'Mechanical Engineer', note: 'Process and equipment behavior specialist.', photo: personOne },
+        { name: 'Raphael Bruno', role: 'Electrical Engineer', note: 'Instrumentation, panel, and controls integration.', photo: personTwo },
+        { name: 'Joao Bartolot', role: 'Software Engineer', note: 'Control software architecture and platform development.', photo: personThree }
       ]
     },
     contact: {
@@ -100,9 +103,9 @@ export const content = {
       description:
         'Unimos experiência mecânica, elétrica e de software para criar soluções práticas no chão de fábrica e robustas no código.',
       team: [
-        { name: 'Nicolas Bartolote', role: 'Engenheiro Mecânico', note: 'Especialista em comportamento de processo e equipamentos.' },
-        { name: 'Raphael Bruno', role: 'Engenheiro Elétrico', note: 'Integração de instrumentação, painéis e controle.' },
-        { name: 'Joao Bartolot', role: 'Engenheiro de Software', note: 'Arquitetura de software de controle e plataformas.' }
+        { name: 'Nicolas Bartolote', role: 'Engenheiro Mecânico', note: 'Especialista em comportamento de processo e equipamentos.', photo: personOne },
+        { name: 'Raphael Bruno', role: 'Engenheiro Elétrico', note: 'Integração de instrumentação, painéis e controle.', photo: personTwo },
+        { name: 'Joao Bartolot', role: 'Engenheiro de Software', note: 'Arquitetura de software de controle e plataformas.', photo: personThree }
       ]
     },
     contact: {
