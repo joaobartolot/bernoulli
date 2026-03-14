@@ -1,3 +1,5 @@
+import { useI18n } from '../../i18n/I18nProvider';
+
 function SunIcon({ className = '' }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden="true">
@@ -15,13 +17,15 @@ function MoonIcon({ className = '' }) {
   );
 }
 
-export default function ThemeToggle({ darkMode, onToggle, labels, className = '' }) {
+export default function ThemeToggle({ darkMode, onToggle, className = '' }) {
+  const { t } = useI18n();
+
   return (
     <button
       onClick={onToggle}
       className={`inline-flex items-center justify-center text-brand-secondary transition hover:text-brand-primary dark:text-brand-text dark:hover:text-brand-primary ${className}`}
-      aria-label={labels.toggleTheme}
-      title={darkMode ? labels.light : labels.dark}
+      aria-label={t('Toggle theme')}
+      title={darkMode ? t('Light') : t('Dark')}
     >
       {darkMode ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
     </button>

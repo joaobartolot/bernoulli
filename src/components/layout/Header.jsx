@@ -1,17 +1,19 @@
 import { useState } from 'react';
-import logoMark from '../../assets/brand/bernoulli-logo-mark.svg';
+import logoMark from '../../assets/brand/bernoulli-logo.png';
+import { useI18n } from '../../i18n/I18nProvider';
 import LanguageToggle from '../ui/LanguageToggle';
 import ThemeToggle from '../ui/ThemeToggle';
 
 const links = [
-  { href: '#home', key: 'home' },
-  { href: '#projects', key: 'projects' },
-  { href: '#about', key: 'about' },
-  { href: '#contact', key: 'contact' }
+  { href: '#home', label: 'Home' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#about', label: 'About Us' },
+  { href: '#contact', label: 'Contact' }
 ];
 
-export default function Header({ t, language, onLanguageChange, darkMode, onToggleDarkMode }) {
+export default function Header({ language, onLanguageChange, darkMode, onToggleDarkMode }) {
   const [open, setOpen] = useState(false);
+  const { t } = useI18n();
 
   return (
     <>
@@ -27,24 +29,24 @@ export default function Header({ t, language, onLanguageChange, darkMode, onTogg
 
           <div className="hidden flex-1 items-center justify-center gap-8 md:flex">
             {links.map((link) => (
-              <a key={link.key} href={link.href} className="text-sm font-medium text-brand-muted transition hover:text-brand-secondary dark:hover:text-brand-text">
-                {t.nav[link.key]}
+              <a key={link.label} href={link.href} className="text-sm font-medium text-brand-muted transition hover:text-brand-secondary dark:hover:text-brand-text">
+                {t(link.label)}
               </a>
             ))}
           </div>
 
           <div className="hidden items-center gap-5 md:flex">
             <LanguageToggle language={language} onToggle={onLanguageChange} />
-            <ThemeToggle darkMode={darkMode} onToggle={onToggleDarkMode} labels={t.theme} />
+            <ThemeToggle darkMode={darkMode} onToggle={onToggleDarkMode} />
           </div>
 
           <div className="flex items-center gap-4 md:hidden">
             <LanguageToggle language={language} onToggle={onLanguageChange} className="text-xs" />
-            <ThemeToggle darkMode={darkMode} onToggle={onToggleDarkMode} labels={t.theme} />
+            <ThemeToggle darkMode={darkMode} onToggle={onToggleDarkMode} />
             <button
               className="relative inline-flex h-8 w-8 items-center justify-center text-brand-secondary dark:text-brand-text"
               onClick={() => setOpen((prev) => !prev)}
-              aria-label={t.accessibility.toggleMenu}
+              aria-label={t('Toggle menu')}
               aria-expanded={open}
             >
               <span
@@ -82,7 +84,7 @@ export default function Header({ t, language, onLanguageChange, darkMode, onTogg
         <nav className="flex h-full flex-col justify-center gap-8 px-10">
           {links.map((link, index) => (
             <a
-              key={link.key}
+              key={link.label}
               href={link.href}
               onClick={() => setOpen(false)}
               className={`text-3xl font-medium text-brand-secondary transition-all duration-500 dark:text-brand-text ${
@@ -90,7 +92,7 @@ export default function Header({ t, language, onLanguageChange, darkMode, onTogg
               }`}
               style={{ transitionDelay: open ? `${index * 70 + 120}ms` : '0ms' }}
             >
-              {t.nav[link.key]}
+              {t(link.label)}
             </a>
           ))}
         </nav>

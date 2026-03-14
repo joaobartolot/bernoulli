@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Header from './components/layout/Header';
 import HeroSection from './sections/HeroSection';
@@ -6,30 +6,36 @@ import ProjectsSection from './sections/ProjectsSection';
 import AboutSection from './sections/AboutSection';
 import ContactSection from './sections/ContactSection';
 import FooterSection from './sections/FooterSection';
-import { content } from './data/content';
+import { useI18n } from './i18n/I18nProvider';
 
 export default function App() {
-  const [language, setLanguage] = useState('en');
+  const { language, setLanguage, t } = useI18n();
   const [darkMode, setDarkMode] = useState(false);
   const [sentMessage, setSentMessage] = useState('');
-  const t = useMemo(() => content[language], [language]);
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', darkMode);
   }, [darkMode]);
 
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
+
+  useEffect(() => {
+    setSentMessage('');
+  }, [language]);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const payload = Object.fromEntries(new FormData(event.currentTarget).entries());
     console.log('Mock contact request:', payload);
-    setSentMessage(t.contact.success);
+    setSentMessage(t('Message received (mock). We logged it in the console.'));
     event.currentTarget.reset();
   };
 
   return (
     <div className="min-h-screen bg-brand-surface text-brand-text">
       <Header
-        t={t}
         language={language}
         onLanguageChange={() => setLanguage((prev) => (prev === 'en' ? 'pt' : 'en'))}
         darkMode={darkMode}
@@ -37,13 +43,13 @@ export default function App() {
       />
 
       <main>
-        <HeroSection hero={t.hero} />
-        <ProjectsSection projects={t.projects} />
-        <AboutSection about={t.about} />
-        <ContactSection contact={t.contact} onSubmit={handleSubmit} sentMessage={sentMessage} />
+        <HeroSection />
+        <ProjectsSection />
+        <AboutSection />
+        <ContactSection onSubmit={handleSubmit} sentMessage={sentMessage} />
       </main>
 
-      <FooterSection footer={t.footer} />
+      <FooterSection />
     </div>
   );
 }

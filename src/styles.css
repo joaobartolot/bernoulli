@@ -37,7 +37,7 @@ body {
 
 @layer components {
   .panel {
-    @apply rounded-3xl border border-brand-secondary/10 bg-white/80 shadow-soft backdrop-blur-xl dark:border-white/10 dark:bg-white/5;
+    @apply border border-brand-secondary/10 bg-white/80 shadow-soft backdrop-blur-xl dark:border-white/10 dark:bg-white/5;
   }
 
   .btn-primary {
