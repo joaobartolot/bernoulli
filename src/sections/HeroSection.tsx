@@ -25,7 +25,7 @@ export default function HeroSection() {
 			<div className="absolute inset-0 -z-10 bg-[linear-gradient(120deg,hsl(var(--color-secondary)/0.78)_8%,hsl(var(--color-secondary)/0.42)_40%,hsl(var(--color-secondary)/0.2)_68%,hsl(var(--color-secondary)/0.58)_100%)]" />
 
 			<div className="mx-auto w-full max-w-6xl px-4 py-24 text-white sm:px-6 lg:px-8">
-				<div className="bg-brand-surface/18 max-w-3xl rounded-[2rem] border border-white/20 p-8 shadow-2xl backdrop-blur-md sm:p-10 lg:p-12">
+				<div className="bg-brand-surface/18 max-w-3xl rounded-lg border border-white/20 p-8 shadow-2xl backdrop-blur-md sm:p-10 lg:p-12">
 					<p className="inline-flex rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white/90">
 						{t("Fluid automation engineering + software")}
 					</p>
