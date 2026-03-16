@@ -24,23 +24,24 @@ function ProjectItem({
 	return (
 		<div
 			className={twMerge(
-				"flex min-h-[550px] w-full flex-col justify-between gap-x-12 bg-black/10 md:flex-row lg:min-h-96",
+				"flex w-full flex-col bg-black/10 md:min-h-96 md:flex-row",
 				reverse && "md:flex-row-reverse",
 			)}
 		>
-			<div className="relative md:w-1/2">
+			<div className="md:w-1/2">
 				<img
 					src={imageSrc}
 					alt={t(imageAlt)}
 					className={twMerge(
-						"absolute -top-8 right-8 aspect-video w-full object-cover md:aspect-square",
+						"block aspect-video w-full object-cover md:aspect-square",
 						reverse
-							? "-bottom-8 left-8 md:-bottom-16 md:left-16"
-							: "-top-8 right-8 md:-top-16 md:right-16",
+							? "translate-x-8 md:translate-y-8"
+							: "-translate-x-8 -translate-y-8",
 					)}
 				/>
 			</div>
-			<div className="flex items-center px-12 py-12 md:w-1/2">
+
+			<div className="flex items-center px-12 py-8 md:w-1/2">
 				<div className="flex flex-col">
 					<p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-primary">
 						{t(eyebrow)}
