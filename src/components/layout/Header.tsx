@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import logoMark from "../../assets/brand/bernoulli-logo.png";
 import { useI18n } from "../../i18n/I18nProvider";
 import LanguageToggle from "../ui/LanguageToggle";
@@ -23,11 +23,14 @@ export default function Header({
 
 	return (
 		<>
-			<header className="sticky top-0 z-50 border-b border-brand-secondary/10 bg-brand-surface/20 backdrop-blur-2xl dark:border-white/10">
-				<div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10">
+			<header
+				className="sticky top-0 z-50 border-b border-brand-secondary/10 bg-brand-surface/20 backdrop-blur-2xl dark:border-white/10"
+				style={{ "--header-height": "4.5rem" } as CSSProperties}
+			>
+				<div className="mx-auto grid min-h-[var(--header-height)] max-w-6xl grid-cols-[1fr_auto_1fr] items-center gap-6 px-5 sm:px-8 lg:px-10">
 					<a
 						href="#home"
-						className="flex min-w-0 items-center gap-3 text-brand-secondary dark:text-brand-text"
+						className="flex min-w-0 items-center gap-3 justify-self-start text-brand-secondary dark:text-brand-text"
 					>
 						<img
 							src={logoMark}
@@ -44,7 +47,7 @@ export default function Header({
 						</div>
 					</a>
 
-					<div className="hidden flex-1 items-center justify-center gap-8 md:flex">
+					<div className="hidden items-center justify-center gap-8 md:flex">
 						{links.map((link) => (
 							<a
 								key={link.label}
@@ -56,7 +59,7 @@ export default function Header({
 						))}
 					</div>
 
-					<div className="hidden items-center gap-5 md:flex">
+					<div className="hidden items-center justify-self-end gap-5 md:flex">
 						<LanguageToggle
 							language={language}
 							onToggle={onLanguageChange}
@@ -67,7 +70,7 @@ export default function Header({
 						/>
 					</div>
 
-					<div className="flex items-center gap-4 md:hidden">
+					<div className="col-start-3 flex items-center justify-self-end gap-4 md:hidden">
 						<LanguageToggle
 							language={language}
 							onToggle={onLanguageChange}

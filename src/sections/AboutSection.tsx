@@ -1,5 +1,3 @@
-import dashboardImage from "../assets/projects/adblue-monitoring.webp";
-import fillingStationImage from "../assets/projects/filling-station.webp";
 import {
 	FiActivity,
 	FiAlertTriangle,
@@ -10,6 +8,8 @@ import {
 	FiShield,
 	FiTool,
 } from "react-icons/fi";
+import dashboardImage from "../assets/projects/adblue-monitoring.webp";
+import fillingStationImage from "../assets/projects/filling-station.webp";
 import SectionTitle from "../components/ui/SectionTitle";
 import { useI18n } from "../i18n/I18nProvider";
 
@@ -114,8 +114,11 @@ export default function AboutSection() {
 							key={problem.title}
 							className="panel rounded-3xl p-6"
 						>
-							<div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-primary/10 text-brand-primary">
-								<problem.icon className="h-6 w-6" aria-hidden="true" />
+							<div
+								className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-primary/10 text-brand-primary"
+								aria-hidden="true"
+							>
+								<problem.icon size={24} />
 							</div>
 							<h4 className="mt-5 text-lg font-semibold text-brand-secondary dark:text-brand-text">
 								{t(problem.title)}
@@ -200,8 +203,11 @@ export default function AboutSection() {
 							className="panel rounded-3xl p-6"
 						>
 							<div className="flex items-center gap-3 text-brand-primary">
-								<div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-primary/10">
-									<result.icon className="h-5 w-5" aria-hidden="true" />
+								<div
+									className="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-primary/10"
+									aria-hidden="true"
+								>
+									<result.icon size={20} />
 								</div>
 								<p className="text-base font-semibold text-brand-secondary dark:text-brand-text">
 									{t(result.title)}
