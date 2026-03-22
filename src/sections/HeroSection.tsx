@@ -1,10 +1,11 @@
-import heroBackground from "../assets/projects/hero_bg.webp";
+import heroBackground from "../assets/projects/hero-bg.jpg";
 import { useI18n } from "../i18n/I18nProvider";
 
 const highlights = [
-	"Fast visual reading",
-	"Safety-focused workflows",
-	"Real-world engineering reliability",
+	"Software development for PLCs and HMIs",
+	"Dashboards to track production, system states, and failures",
+	"Clear diagnosis when something goes off track",
+	"Automated reports to track operations",
 ];
 
 export default function HeroSection() {
@@ -26,17 +27,12 @@ export default function HeroSection() {
 
 			<div className="mx-auto w-full max-w-6xl px-4 py-24 text-white sm:px-6 lg:px-8">
 				<div className="bg-brand-surface/18 max-w-3xl rounded-lg border border-white/20 p-8 shadow-2xl backdrop-blur-md sm:p-10 lg:p-12">
-					<p className="inline-flex rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white/90">
-						{t("Fluid automation engineering + software")}
-					</p>
 					<h1 className="mt-5 text-4xl font-black leading-[1.05] tracking-tight sm:text-6xl">
-						{t(
-							"Industrial fluid control that feels simple, fast, and safe.",
-						)}
+						{t("Real control into your industrial process.")}
 					</h1>
 					<p className="mt-6 max-w-2xl text-base leading-relaxed sm:text-lg">
 						{t(
-							"Bernoulli Automation designs digital control systems for complex plants, with a user experience that keeps operators confident from first glance.",
+							"We connect control, data, and monitoring to turn operations into reliable information.",
 						)}
 					</p>
 					<ul className="mt-6 space-y-2.5">

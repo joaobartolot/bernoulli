@@ -4,6 +4,7 @@ import Header from "./components/layout/Header";
 import HeroSection from "./sections/HeroSection";
 import ProjectsSection from "./sections/ProjectsSection";
 import AboutSection from "./sections/AboutSection";
+import TeamSection from "./sections/TeamSection";
 import ContactSection from "./sections/ContactSection";
 import FooterSection from "./sections/FooterSection";
 import { useI18n } from "./i18n/I18nProvider";
@@ -28,7 +29,7 @@ export default function App() {
 		);
 		console.log("Mock contact request:", payload);
 		setSentMessage(
-			t("Message received (mock). We logged it in the console."),
+			t("Message received. We will be in touch soon."),
 		);
 		event.currentTarget.reset();
 	};
@@ -48,6 +49,7 @@ export default function App() {
 				<HeroSection />
 				<ProjectsSection />
 				<AboutSection />
+				<TeamSection />
 				<ContactSection
 					onSubmit={handleSubmit}
 					sentMessage={sentMessage}

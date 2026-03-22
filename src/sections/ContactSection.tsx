@@ -17,7 +17,7 @@ export default function ContactSection({
 			<SectionTitle
 				title={t("Let's map your next automation build")}
 				subtitle={t(
-					"Send a quick brief. The form currently performs a mock submit and logs data in the browser console.",
+					"Send a quick brief and we will get back to you to discuss your process, goals, and next steps.",
 				)}
 			/>
 			<form onSubmit={onSubmit} className="panel grid gap-4 p-7">
