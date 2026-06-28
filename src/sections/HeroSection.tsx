@@ -3,7 +3,7 @@ import { useI18n } from "../i18n/I18nProvider";
 
 const highlights = [
 	"Software development for PLCs and HMIs",
-	"Dashboards to track production, system states, and failures",
+	"Dashboards to track production, system states and failures",
 	"Clear diagnosis when something goes off track",
 	"Automated reports to track operations",
 ];

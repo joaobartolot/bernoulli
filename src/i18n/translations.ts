@@ -17,7 +17,7 @@ export const translations = {
 		"See project cases": "Ver casos de projeto",
 		"Software development for PLCs and HMIs":
 			"Desenvolvimento de software para PLCs e HMIs",
-		"Dashboards to track production, system states, and failures":
+		"Dashboards to track production, system states and failures":
 			"Dashboards para acompanhar a produção, estados do sistema e falhas",
 		"Clear diagnosis when something goes off track":
 			"Diagnóstico claro quando algo sai do previsto",
@@ -66,26 +66,21 @@ export const translations = {
 			"Integrações difíceis com ferramentas modernas",
 		"Legacy systems often stay isolated from reporting, analytics, and business platforms.":
 			"Sistemas legados frequentemente ficam isolados de relatórios, análises e plataformas de negócio.",
-		"Hard to maintain and evolve":
-			"Difícil de manter e evoluir",
+		"Hard to maintain and evolve": "Difícil de manter e evoluir",
 		"Without structure, every small change becomes slower, riskier, and harder to validate.":
 			"Sem estrutura, cada pequena mudança fica mais lenta, mais arriscada e mais difícil de validar.",
 		"What We Do": "O que fazemos",
-		"We Enhance What Already Works":
-			"Melhoramos o que já está a funcionar",
+		"We Enhance What Already Works": "Melhoramos o que já está a funcionar",
 		"We improve existing systems with better structure, monitoring, dashboards, alerts and integrations.":
 			"Melhoramos sistemas existentes com mais estrutura, monitorização, dashboards, alertas e integrações.",
 		"We don't replace your system - we make it better.":
 			"Não substituímos o seu sistema - tornamo-lo melhor.",
 		"How We Do It": "Como fazemos",
-		"How We Improve Your System":
-			"Como melhoramos o seu sistema",
-		"Improve PLC and HMI structure":
-			"Melhorar a estrutura de PLC e HMI",
+		"How We Improve Your System": "Como melhoramos o seu sistema",
+		"Improve PLC and HMI structure": "Melhorar a estrutura de PLC e HMI",
 		"Add real-time monitoring and alerts":
 			"Adicionar monitorização e alertas em tempo real",
-		"Build dashboards and reports":
-			"Criar dashboards e relatórios",
+		"Build dashboards and reports": "Criar dashboards e relatórios",
 		"Enable integrations with modern tools":
 			"Permitir integrações com ferramentas modernas",
 		"Support remote access": "Dar suporte ao acesso remoto",
@@ -97,11 +92,9 @@ export const translations = {
 		"Clear visibility": "Visibilidade clara",
 		"Faster response to issues": "Resposta mais rápida a problemas",
 		"More reliable processes": "Processos mais fiáveis",
-		"Easier to maintain and evolve":
-			"Mais fácil de manter e evoluir",
-		"Positioning": "Posicionamento",
-		"Bridging Automation and Software":
-			"Conectando automação e software",
+		"Easier to maintain and evolve": "Mais fácil de manter e evoluir",
+		Positioning: "Posicionamento",
+		"Bridging Automation and Software": "Conectando automação e software",
 		"We bring modern software engineering into industrial environments.":
 			"Levamos engenharia de software moderna para ambientes industriais.",
 		"Working is not the same as being under control.":
